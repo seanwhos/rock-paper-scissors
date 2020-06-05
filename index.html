@@ -1,3 +1,74 @@
+<head>
+
 <title> Rock Paper Scissors</title>
+
+</head>
+
+<script>
+
+
+   function computerPlay() {
+       let option = ['rock', 'paper', 'scissors']; //create array with three options
+       let compChoice = option[Math.floor(Math.random() * option.length)]; //math random selects number between 0-array.length; math floor return whole interger
+       return compChoice //return random choice
+   }
+
+   function singleRound() {
+        let playerSelection = prompt('rock paper or scissors?');
+        let compSelection = computerPlay();
+
+        if ( (playerSelection === 'rock' && compSelection === 'scissors') || (playerSelection === 'scissors' && compSelection === 'paper') || (playerSelection === 'paper' && compSelection === 'rock') ) {
+            alert(`You win! Computer chose ${compSelection}`);
+            win += 1;
+
+        } else if (playerSelection === compSelection) {
+            alert(`Draw! Computer chose ${compSelection}`);
+
+        } else {
+            alert(`You lose! Computer chose ${compSelection}`)
+            lose += 1;
+        }
+   }
+
+let win = 0;
+let lose = 0;
+
+function game() { 
+
+    for (let i = 0; i < 5; i++) {
+        singleRound();
+    }
+
+    if (win > lose) {
+        alert(`You win with a score of ${win} to the computer's ${lose}!`)
+    } else if (lose > win) {
+        alert(`You lose with a score of ${win} compared to the computer's ${lose}`)
+    } else {
+        alert(`Looks like a ${win}:${lose} draw!`)
+    }
+
+}
+
+game()
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+    
+</script>
+
+<body>
+
 <h1> Rock, Paper, Scissors game</h1>
-<h2>test</h2>
+<h2>test heading</h2>
+
+</body>

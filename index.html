@@ -1,74 +1,40 @@
 <head>
 
 <title> Rock Paper Scissors</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
-<script>
-
-
-   function computerPlay() {
-       let option = ['rock', 'paper', 'scissors']; //create array with three options
-       let compChoice = option[Math.floor(Math.random() * option.length)]; //math random selects number between 0-array.length; math floor return whole interger
-       return compChoice //return random choice
-   }
-
-   function singleRound() {
-        let playerSelection = prompt('rock paper or scissors?');
-        let compSelection = computerPlay();
-
-        if ( (playerSelection === 'rock' && compSelection === 'scissors') || (playerSelection === 'scissors' && compSelection === 'paper') || (playerSelection === 'paper' && compSelection === 'rock') ) {
-            alert(`You win! Computer chose ${compSelection}`);
-            win += 1;
-
-        } else if (playerSelection === compSelection) {
-            alert(`Draw! Computer chose ${compSelection}`);
-
-        } else {
-            alert(`You lose! Computer chose ${compSelection}`)
-            lose += 1;
-        }
-   }
-
-let win = 0;
-let lose = 0;
-
-function game() { 
-
-    for (let i = 0; i < 5; i++) {
-        singleRound();
-    }
-
-    if (win > lose) {
-        alert(`You win with a score of ${win} to the computer's ${lose}!`)
-    } else if (lose > win) {
-        alert(`You lose with a score of ${win} compared to the computer's ${lose}`)
-    } else {
-        alert(`Looks like a ${win}:${lose} draw!`)
-    }
-
-}
-
-game()
-
-
-
-
-
-
-
- 
-
-
-
-
-
-    
-</script>
 
 <body>
+<div id = "container">
+    <h1> Rock, Paper, Scissors Game</h1>
+    <p id = "description">Select your choice of rock, paper or scissors from the 'player' section on the left; first to five wins!</p>
+    <div id = "game">
+        <div id = "player-buttons">
+            <h2>player</h2>
+            <button >rock</button>
+            <button >paper</button>
+            <button >scissors</button>
+        </div>
+        <div class = "seperate"></div>
+        <div id = "comp-buttons">
+            <h2>computer</h3>
+            <button id = "rock">rock</button>
+            <button id = "paper">paper</button>
+            <button id = "scissors">scissors</button>
+        </div>
+    </div>
 
-<h1> Rock, Paper, Scissors game</h1>
-<h2>test heading</h2>
+    <div id = "game-info">
+        <p>Game information will appear here!</p>
+    </div>
 
+    <div id = "score">
+        <p id ="player-score">0</p> <div class = "seperate"></div> <p id = "comp-score">0</p>
+    </div>
+</div>
+
+
+<script src='script.js'></script>
 </body>

@@ -1,0 +1,112 @@
+body{
+    background: #ffebcc;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    color: rgb(196, 120, 120);
+}
+
+
+#container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 26pt;
+    padding: 40px 0 20px 0;
+    margin: 0;
+}
+
+#description {
+    margin: auto auto 30px auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 18pt;
+    margin-top: 0;
+}
+
+#game {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    height: auto;
+    width: 70%;
+    max-width: 500px;
+    justify-content: space-around;
+}
+
+#player-buttons, #comp-buttons {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 50px 20px;
+    width: 100%;
+    
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background: rgb(196, 120, 120);
+    color: #ffebcc;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 9pt;
+    letter-spacing: 1.5pt;
+    text-transform: inherit;
+}
+
+#player-buttons button:hover {
+    background: rgb(75, 165, 180);
+}
+
+#player-buttons button:active {
+    box-shadow: inset rgb(20, 95, 109) 0 0 5px;
+    transform: scale(1.03);
+    transition-duration: 2.5ms;
+}
+
+.seperate {
+    height: auto;
+    border-left: 1px solid;
+    
+}
+
+#game-info {
+    text-align: center;
+    background: rgb(196, 120, 120);
+    width: 70%;
+    margin: 10px auto;
+    max-width: 500px;
+    padding: 10px;
+    color: #ffebcc;
+}
+
+#score {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    max-width: 500px;
+}
+
+#score p {
+    font-size: 42pt;
+    font-weight: bold;
+    width: 100px;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    text-shadow: 0.7px 0.7px white, -0.7px -0.7px black;
+}
+
+.compActive {
+    background: rgb(207, 88, 58);
+    transition-duration: 400ms;
+}

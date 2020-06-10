@@ -48,11 +48,13 @@ function singleRound(input) {
         info.innerHTML = ( `You win! Computer chose ${compSelection}`);
         playerCount += 1;
         scores[0].innerHTML = (playerCount);
+        if (playerCount === 5) {info.innerHTML = "Well done, you win!"}
     } else if (playerSelection === compSelection) {
         info.innerHTML = (`Draw! Computer chose ${compSelection}`);
     } else {
         info.innerHTML = (`You lose! Computer chose ${compSelection}`);
         compCount += 1;
         scores[1].innerHTML = (compCount);
+        if (compCount === 5) {info.innerHTML = "Try again! You lost."}
     }
 }
